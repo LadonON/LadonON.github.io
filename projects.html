@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse all repositories from LadonON.">
+  <title>Projects | LadonON</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="hero">
+    <nav class="nav">
+      <p class="brand">LadonON</p>
+      <div class="nav-links">
+        <a class="btn btn-small btn-ghost" href="index.html">Home</a>
+        <a class="btn btn-small" href="https://github.com/LadonON" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">Repository Index</p>
+      <h1>All Projects</h1>
+      <p class="subhead">
+        Explore every public repository from <strong>@LadonON</strong>, sorted and filtered in real time.
+      </p>
+    </div>
+  </header>
+
+  <main class="projects-main">
+    <section class="panel toolbar">
+      <label for="sortBy">Sort</label>
+      <select id="sortBy">
+        <option value="stars">Most Starred</option>
+        <option value="updated">Recently Updated</option>
+        <option value="name">Name A-Z</option>
+      </select>
+
+      <label for="languageFilter">Language</label>
+      <select id="languageFilter">
+        <option value="all">All</option>
+      </select>
+    </section>
+
+    <section class="projects">
+      <div class="section-title">
+        <p class="eyebrow">Repositories</p>
+        <h2 id="resultsTitle">Loading repositories...</h2>
+      </div>
+      <div id="allProjectGrid" class="project-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> LadonON</p>
+    <a href="https://github.com/LadonON" target="_blank" rel="noopener noreferrer">@LadonON</a>
+  </footer>
+
+  <template id="projectTemplateAll">
+    <article class="project-card">
+      <h3></h3>
+      <p class="description"></p>
+      <div class="meta">
+        <span class="language"></span>
+        <span class="stars"></span>
+        <span class="updated"></span>
+      </div>
+      <a class="btn btn-small" target="_blank" rel="noopener noreferrer">Open Repo</a>
+    </article>
+  </template>
+
+  <script src="projects.js"></script>
+</body>
+</html>

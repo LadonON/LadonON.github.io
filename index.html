@@ -1,0 +1,124 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LadonON builds practical software projects and experiments in code.">
+  <title>LadonON | GitHub Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="hero">
+    <nav class="nav">
+      <p class="brand">LadonON</p>
+      <div class="nav-links">
+        <a class="btn btn-small btn-ghost" href="projects.html">Projects</a>
+        <a class="btn btn-small" href="https://github.com/LadonON" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">LadonON</p>
+      <h1>LadonON</h1>
+      <p class="subhead">
+        Personal site for projects, experiments, and open-source work by
+        <strong>@LadonON</strong>.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="projects.html">View Projects</a>
+        <a class="btn btn-ghost" href="#about">About</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="panel">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>About Me</h2>
+      </div>
+
+      <div class="about-layout">
+        <p class="about-lead">
+          Hi, I am LadonON. I am a passionate developer who builds fun, useful
+          projects and tools, especially around game tooling, lightweight
+          utilities, and backend systems. All of my work is open source and
+          available on GitHub.
+        </p>
+
+        <section class="about-block">
+          <h3>What I Am Working On</h3>
+          <ul class="about-list">
+            <li>Minecraft server tooling: database systems and plugins for Minecraft servers (PostgreSQL + HikariCP integration).</li>
+            <li>Python utilities: lightweight tools like a simple file-sharing platform.</li>
+            <li>Backend tools and engines: experimenting with database engines and server utilities.</li>
+          </ul>
+        </section>
+
+        <section class="about-block">
+          <h3>Projects You Might Like</h3>
+          <ul id="aboutProjectList" class="about-list" aria-live="polite">
+            <li>Loading top repositories...</li>
+          </ul>
+        </section>
+
+        <section class="about-block">
+          <h3>Skills and Interests</h3>
+          <ul class="about-tags">
+            <li>Java</li>
+            <li>Python</li>
+            <li>PostgreSQL</li>
+            <li>Linux</li>
+            <li>Server tooling and utilities</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section id="stats" class="panel panel-grid">
+      <article class="stat-card">
+        <p class="label">Public Repos</p>
+        <p id="repoCount" class="value">--</p>
+      </article>
+      <article class="stat-card">
+        <p class="label">Followers</p>
+        <p id="followerCount" class="value">--</p>
+      </article>
+      <article class="stat-card">
+        <p class="label">Following</p>
+        <p id="followingCount" class="value">--</p>
+      </article>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="section-title">
+        <p class="eyebrow">Repositories</p>
+        <h2>Featured Projects</h2>
+      </div>
+      <div id="projectGrid" class="project-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> LadonON</p>
+    <a href="https://github.com/LadonON" target="_blank" rel="noopener noreferrer">@LadonON</a>
+  </footer>
+
+  <template id="projectTemplate">
+    <article class="project-card">
+      <h3></h3>
+      <p class="description"></p>
+      <div class="meta">
+        <span class="language"></span>
+        <span class="stars"></span>
+      </div>
+      <a class="btn btn-small" target="_blank" rel="noopener noreferrer">Open Repo</a>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
